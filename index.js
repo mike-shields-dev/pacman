@@ -7,13 +7,12 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 boundaries.forEach(b => b.draw(ctx));
-const boundary = new Boundary({
-    ctx,
-    position: {
-        x: 40, 
-        y: 40
-    }
-});
+
+function loop() {
+
+    requestAnimationFrame(loop)
 }
 
-draw();
+loop();
+
+export { ctx };
