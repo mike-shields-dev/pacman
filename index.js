@@ -28,7 +28,10 @@ const player = new Pacman({
         x: 1 * gridRes, 
         y: 1 * gridRes
     }, 
-    velocity: 0,
+    velocity: {
+        x: 0, 
+        y: 0,
+    },
 })
 
 player.draw(ctx);
