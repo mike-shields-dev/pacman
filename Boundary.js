@@ -8,7 +8,7 @@ class Boundary {
     }
 
     draw(ctx) {
-        ctx.fillStyle = 'blue';
+        ctx.fillStyle = "#00f";
         ctx.fillRect(
             this.position.x, 
             this.position.y, 

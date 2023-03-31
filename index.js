@@ -1,4 +1,5 @@
 import { gridRes, BOUNDARY } from './game-config.js';
+import Pacman from './Pacman.js';
 
 import Boundary from './Boundary.js';
 import map from './map.js';
@@ -21,6 +22,16 @@ map.forEach((row, y) => {
         }
     });
 });
+
+const player = new Pacman({ 
+    position: {
+        x: 1 * gridRes, 
+        y: 1 * gridRes
+    }, 
+    velocity: 0,
+})
+
+player.draw(ctx);
 
 function loop() {
     requestAnimationFrame(loop)
