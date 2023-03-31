@@ -22,7 +22,12 @@ class Boundary {
     }
 };
 
-    requestAnimationFrame(draw)
+const boundary = new Boundary({
+    position: {
+        x: 40, 
+        y: 40
+    }
+});
 }
 
 draw();
