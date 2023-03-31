@@ -1,8 +1,8 @@
 const canvas = document.querySelector('canvas');
 
-canvas.getContext('2d');
-canvas.width = document.innerWidth;
-canvas.height = document.innerHeight;
+const c = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 function draw() {
     console.log(Date.now());
