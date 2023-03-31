@@ -1,27 +1,29 @@
+import { gridRes, BOUNDARY } from './game-config.js';
+
 import Boundary from './Boundary.js';
 import map from './map.js';
 
-const canvas = document.querySelector('canvas');
-
-const ctx = canvas.getContext('2d');
+const ctx = document.querySelector('canvas').getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-map.forEach((row, _y) => {
-    row.forEach((col, _x) => {
-        const position = { x: _x * 40, y: _y * 40}
-        const boundary = new Boundary({ position });
-        const isChecked = map[_y][_x] === 1;
-
-        if(isChecked) boundary.draw(ctx);
+map.forEach((row, y) => {
+    row.forEach((cell, x) => {
+        const position = { 
+            x: x * gridRes, 
+            y: y * gridRes
+        };
+        
+        switch (cell) {
+            case BOUNDARY: 
+                new Boundary({ position }).draw(ctx);
+                break;
+        }
     });
 });
 
 function loop() {
-
     requestAnimationFrame(loop)
 }
 
 loop();
-
-export { ctx };

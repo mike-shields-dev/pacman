@@ -1,8 +1,10 @@
+import { gridRes } from './game-config.js';
+
 class Boundary {
-    constructor({ ctx, position }) {
+    constructor({ position }) {
         this.position = position;
-        this.width = 40;
-        this.height = 40;
+        this.width = gridRes;
+        this.height = gridRes;
     }
 
     draw(ctx) {
