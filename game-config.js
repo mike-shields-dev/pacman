@@ -1,6 +1,15 @@
-const gridRes = 40;
+const gridRes = 80;
 
 // Entities 
 const BOUNDARY = 'b';
 
-export { gridRes, BOUNDARY };
+// COMMAND
+const COMMAND = {
+    UP: 'w',
+    LEFT: 'a',
+    DOWN: 's',
+    RIGHT: 'd',
+
+}
+
+export { gridRes, BOUNDARY, COMMAND };
