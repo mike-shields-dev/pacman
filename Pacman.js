@@ -1,12 +1,16 @@
 import { gridRes } from './game-config.js';
 
 class Pacman {
-    #radius = gridRes / 2.5;
+    #radius = gridRes / 3;
     speed = 5;
 
     constructor({ position, velocity }) {
         this.position = position;
         this.velocity = velocity;
+    }
+
+    get radius() {
+        return this.#radius
     }
 
     update(directions) {
@@ -39,14 +43,20 @@ class Pacman {
 
     draw(ctx) {
         const offset = gridRes / 2;
-        const x = this.position.x + offset;
-        const y = this.position.y + offset;
+        const x = this.position.x;
+        const y = this.position.y;
         const startAngle = 0;
         const endAngle = Math.PI * 2;
         
         ctx.beginPath();
         ctx.fillStyle = '#ff0';
-        ctx.arc(x, y, this.#radius, startAngle, endAngle);
+        ctx.arc(
+            x, 
+            y, 
+            this.#radius, 
+            startAngle, 
+            endAngle
+        );
         ctx.fill();
         ctx.closePath();
     }

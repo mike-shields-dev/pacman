@@ -1,6 +1,6 @@
 import { gridRes } from './game-config.js';
 
-class Boundary {
+class Wall {
     constructor({ position }) {
         this.position = position;
         this.width = gridRes;
@@ -18,4 +18,4 @@ class Boundary {
     }
 };
 
-export default Boundary;
+export default Wall;

@@ -1,7 +1,7 @@
 const gridRes = 80;
 
 // Entities 
-const BOUNDARY = 'b';
+const WALL = 'b';
 
 // COMMAND
 const COMMAND = {
@@ -12,4 +12,4 @@ const COMMAND = {
 
 }
 
-export { gridRes, BOUNDARY, COMMAND };
+export { gridRes, WALL, COMMAND };
